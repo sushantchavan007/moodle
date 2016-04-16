@@ -1588,7 +1588,7 @@ class global_navigation extends navigation_node {
             }
             $coursecount = count($this->addedcategories[$category]->children->type(self::TYPE_COURSE));
         } else if ($category instanceof navigation_node) {
-            if (($category->type != self::TYPE_CATEGORY) || ($category->type != self::TYPE_MY_CATEGORY)) {
+            if (($category->type != self::TYPE_CATEGORY) && ($category->type != self::TYPE_MY_CATEGORY)) {
                 return false;
             }
             $coursecount = count($category->children->type(self::TYPE_COURSE));
